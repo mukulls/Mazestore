@@ -8,6 +8,7 @@ import Product from "./pages/Product/Product"; //importing Product.js
 import Products from "./pages/Products/Products"; //import products.js
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/NAvbar";
+import "./App.css";
 
 const Layout =()=>{
   return(
