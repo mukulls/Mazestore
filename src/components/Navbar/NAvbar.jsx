@@ -5,7 +5,7 @@ import {BsPerson} from "react-icons/bs"
 import {AiOutlineHeart} from "react-icons/ai"
 import {  Link } from 'react-router-dom'
 import {MdOutlineKeyboardArrowDown} from "react-icons/md"
-import "./Navbar.css"
+import "./Navbar.scss"
 const NAvbar = () => {
   return (
     <div className='navbar'>
