@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import {BsArrowLeftCircle} from "react-icons/bs";
-import {BsArrowRightCircle} from "react-icons/bs";
+import {BsFillArrowLeftCircleFill} from "react-icons/bs";
+import {BsFillArrowRightCircleFill} from "react-icons/bs";
 import "./Slider.scss";
 const Slider= ()=>{
   const[currentSlide, setCurrentSlide] = useState(0);
@@ -18,20 +18,21 @@ const Slider= ()=>{
 
     return (
       <div className="slider">
-        <div className='container' style={{transform: `translateX(-${currentSlide *100}vw)`}}>
-          <img src= {data[0]} alt=""/>
-          <img src= {data[1]} alt=""/>
-          <img src= {data[2]} alt=""/>
+        <div className="container" style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
+          <img src={data[0]} alt="" />
+          <img src={data[1]} alt="" />
+          <img src={data[2]} alt="" />
         </div>
-        <div className="icons">
-          <div className='icon' onClick={prevSlide}>
-            <BsArrowLeftCircle/>
-          </div>
-          <div className='icon' onClick={nextSlide}>
-            <BsArrowRightCircle/>
-          </div>
-        </div>
-      </div>
+<div className="icons-container">
+  <div className="icon" onClick={prevSlide}>
+    <BsFillArrowLeftCircleFill />
+  </div>
+  <div className="icon" onClick={nextSlide}>
+    <BsFillArrowRightCircleFill />
+  </div>
+</div>
+</div>
+
     )
 }
 
