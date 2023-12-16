@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {AiOutlineSearch} from "react-icons/ai"
 import {AiOutlineShoppingCart} from "react-icons/ai"
 import {BsPerson} from "react-icons/bs"
 import {AiOutlineHeart} from "react-icons/ai"
 import {  Link } from 'react-router-dom'
 import {MdOutlineKeyboardArrowDown} from "react-icons/md"
+import { Cart } from '../Cart/Cart'
 import "./Navbar.scss"
 const NAvbar = () => {
+  const [open,setOpen]= useState(false)
   return (
     <div className='navbar'>
         <div className='wrapper'>
@@ -50,13 +52,14 @@ const NAvbar = () => {
                 <AiOutlineSearch/>
                 <AiOutlineHeart/>
                 <BsPerson/>
-                <div className='cartIcon'>
+                <div className='cartIcon' onClick={()=>setOpen(!open)}>
                   <AiOutlineShoppingCart/>
                   <span>1</span>
                 </div>
               </div>
             </div>
           </div>
+          {open && <Cart/>}
         </div>
   )
 }
